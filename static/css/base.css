@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+    padding: 5px 5%;
+    background-image: url('../img/bg1.jpg');
+    background-size: 100%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+}
+
+header>h1 {
+    font-weight: bold;
+    color: coral;
+    font-size: 140px
+}
+
+footer {
+    font-size: 15px
+}
+
+nav {
+    padding: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+header {
+    padding-top: 50px;
+}
