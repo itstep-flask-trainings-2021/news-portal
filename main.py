@@ -7,5 +7,5 @@ if __name__=='__main__':
     hc = HomeController()
     nc = NewsController()
     uc = UsersController()
-    app.run()
+    app.run(debug=True)
     print('ok')

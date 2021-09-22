@@ -5,12 +5,12 @@ body {
     background-size: 100%;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 header>h1 {
     font-weight: bold;
-    color: coral;
+    color: plum;
     font-size: 140px
 }
 
@@ -38,4 +38,10 @@ nav a {
 
 header {
     padding-top: 50px;
+}
+
+.info-box {
+    color: navy;
+    background-color: whitesmoke;
+    padding: 20px;
 }

@@ -5,5 +5,10 @@
 {% block content %}
 <div class="main-box">
     <h2>Страница новостей</h2>
+    {% if 'user' in session and session['user'] == 'petya' %}
+    <h4>
+        <a href="/news/create">Добавить новость</a>
+    </h4>
+    {% endif %}
 </div>
 {% endblock %}

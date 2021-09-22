@@ -1,0 +1,15 @@
+{% extends 'base/master.html' %}
+
+{% block title %} News Creation Result {% endblock %}
+
+{% block content %}
+<div class="main-box">
+    <h2>Отчёт о добавлении новости</h2>
+    <div class="info-box">
+        <span style="color: {{ context['mess_color'] }}">
+        <br>
+        {{ context['message'] }}
+        </span>
+    </div>
+</div>
+{% endblock %}

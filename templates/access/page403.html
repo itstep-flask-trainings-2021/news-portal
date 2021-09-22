@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<title>Page 403</title>
+<body>
+<h2 style="color: red">Page 403</h2>
+<h5 style="color: red">
+    Доступ для 
+    {% if 'user' in session %}
+    {{ session['user'] }}
+    {% else %}
+    Guest
+    {% endif %}
+    запрещен
+    </h5>
+</body>
+</head>

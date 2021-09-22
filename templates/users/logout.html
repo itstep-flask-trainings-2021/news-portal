@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html lang="eng">
-<head>
-<meta charset="UTF-8">
-<title>Untitled</title>
-<body>
-<h2>Untitled Page</h2>
-</body>
-</head>
+{% extends 'base/master.html' %}
+
+{% block title %} Logout {% endblock %}
+
+{% block content %}
+<div class="main-box">
+    <h2>Выход</h2>
+    <div class="info-box">
+        Вы успешно вышли из системы!
+        <br>
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 # загрузка типовых страниц сайта
-from flask import render_template
+from flask import render_template, session, request
 from config import app
 # контроллер запускает процесс прорисовки страницы в браузере
 
@@ -8,9 +8,20 @@ class NewsController(object):
 
     # метод для загрузки шаблона главной страницы
     @staticmethod
-    @app.route('/news/create')
+    @app.route('/news/create', methods=['GET', 'POST'])
     def create():
-        return render_template('news/create.html')
+        if 'user' in session and session['user'] == 'petya':
+            if request.method == 'GET':
+                return render_template('news/create.html')
+            elif request.method == 'POST':
+                message = 'Добавить новость не удалось'
+                mess_color='red'
+                return render_template('news/create_info.html', context={
+                    'message': message,
+                    'mess_color': mess_color
+                })
+        else:
+            return render_template('access/page403.html')
 
     @staticmethod
     @app.route('/news/delete')
