@@ -5,5 +5,50 @@
 {% block content %}
 <div class="main-box">
     <h2>Регистрация пользователя</h2>
+    <form action="/users/register" method="post">
+        <p>
+            <label for="login">Логин:</label><br>
+            <input type="text" id="login" name="login" class="inp" required></input>
+        </p>
+        <p>
+            <label for="pass1">Пароль:</label><br>
+            <input type="password" id="pass1" name="pass1" class="inp" required></input>
+        </p>
+        <p>
+            <label for="pass2">Подтверждение пароля:</label><br>
+            <input type="password" id="pass2" name="pass2" class="inp" required></input>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" class="inp" required></input>
+        </p>
+        <p style="text-align: center;">
+            <input type="submit" value="Отправить" class="btn btn-success my-btn"></input>
+            <input type="reset" value="Очистить" class="btn btn-danger my-btn"></input>
+        </p>
+    </form>
 </div>
+<style>
+    form {
+        border: 1px solid silver;
+        width: 400px;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: whitesmoke;
+        color: gray;
+        text-align: left;
+    }
+
+    .inp {
+        width: 99%;
+        padding: 4px;
+    }
+
+    .my-btn {
+        width: 170px;
+        padding: 3px;
+        border-radius: 5px;
+    }
+</style>
 {% endblock %}

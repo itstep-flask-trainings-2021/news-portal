@@ -5,5 +5,38 @@
 {% block content %}
 <div class="main-box">
     <h2>Страница новостей</h2>
+    {% if 'user' in session and session['user'] == 'petya' %}
+    <h4>
+        <a href="/news/create" style="color: white">Добавить новость</a>
+    </h4>
+    {% endif %}
+    <table id="news_table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>About</th>
+                <th>Content</th>
+                <th>Image</th>
+                <th>Publish</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in context.all_news %}
+                <tr>
+                    <td>{{ article[0] }}</td>
+                    <td>{{ article[1] }}</td>
+                    <td>{{ article[2] }}</td>
+                    <td>{{ article[3] }}</td>
+                    <td>
+                        <img class="logo" src="{{ url_for('static', filename=article[4]) }}" alt="Failed">
+                    </td>
+                    <td>{{ article[5] }}</td>
+                    <td>{{ article[7] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}

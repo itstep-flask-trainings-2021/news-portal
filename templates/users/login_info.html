@@ -1,0 +1,15 @@
+{% extends 'base/master.html' %}
+
+{% block title %} Registration Result {% endblock %}
+
+{% block content %}
+<div class="main-box">
+    <h2>Отчёт о авторизации</h2>
+    <div class="info-box">
+        <span style="color: {{ context['mess_color'] }}">
+        <br>
+        {{ context['message'] }}
+        </span>
+    </div>
+</div>
+{% endblock %}

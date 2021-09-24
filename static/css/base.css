@@ -1,16 +1,16 @@
 body {
     text-align: center;
     padding: 5px 5%;
-    background-image: url('../img/bg1.jpg');
+    background-image: url('../img/bg.jpg');
     background-size: 100%;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 header>h1 {
     font-weight: bold;
-    color: coral;
+    color: plum;
     font-size: 140px
 }
 
@@ -38,4 +38,29 @@ nav a {
 
 header {
     padding-top: 50px;
+}
+
+.info-box {
+    color: navy;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+#news_table {
+    width: 100%;
+    margin: 25px 0px;
+}
+
+#news_table th,
+#news_table td {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+#news_table th {
+    color: limegreen;
+}
+
+.logo {
+    width: 100px;
 }

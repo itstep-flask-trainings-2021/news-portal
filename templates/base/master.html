@@ -12,7 +12,7 @@
     <hr>
     <nav>
     <div class="row">
-    <div class="col-md-8 left">    
+    <div class="col-md-7 left">    
     |
     <a href="/">Главная</a>
     |
@@ -22,12 +22,28 @@
     |
     <a href="/contacts">Контакты</a>
     |</div>
-    <div class="col-md-4 right">
-    |
-    <a href="/users/login">Вход</a>
-    |
-    <a href="/users/register">Регистрация</a>
-    |
+    <div class="col-md-5 right">
+    <a href="" style="margin-right: 30px">
+        <span style="color: lime">Hi, 
+        {% if 'user' in session %}
+            {{ session['user']}}
+        {% else %}
+            Guest!
+        {% endif %}
+        </span>
+    </a>
+        |
+    {% if 'user' not in session%}
+        <a href="/users/login">Вход</a>
+        |
+        <a href="/users/register">Регистрация</a>
+        |
+    {% else %}
+        <a href="/users/logout">Выход</a>
+        |
+        <a href="/users/profile">Профиль</a>
+        |
+    {% endif %}
     </div>
     </div>
     </nav>
